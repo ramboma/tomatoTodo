@@ -1,4 +1,4 @@
-package org.rambosoft.tomatoTodo.api;
+package org.rambosoft.tomatoTodo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

@@ -1,4 +1,4 @@
-package org.rambosoft.tomatoTodo.api;
+package org.rambosoft.tomatoTodo;
 
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
