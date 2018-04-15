@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.rambosoft.tomatoTodo</groupId>
+    <artifactId>system-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>core</module>
+        <module>api</module>
+        <module>dao</module>
+        <module>service</module>
+    </modules>
+
+    <properties>
+        <springframework.version>5.0.5.RELEASE</springframework.version>
+        <springboot.version>2.0.1.RELEASE</springboot.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- 统一管理Spring依赖 -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${springframework.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--通过Spring Boot管理其他第三方版本-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${springboot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--其他-->
+        </dependencies>
+    </dependencyManagement>
+</project>
