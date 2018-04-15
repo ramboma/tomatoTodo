@@ -1,6 +1,6 @@
-package org.rambosoft.tomatoTodo.api;
+package org.rambosoft.tomatoTodo.api.api;
 
-import org.rambosoft.tomatoTodo.service.TodoService;
+import org.rambosoft.tomatoTodo.api.service.TodoService;
 
 /**
  * Created by Administrator on 2018-04-15.

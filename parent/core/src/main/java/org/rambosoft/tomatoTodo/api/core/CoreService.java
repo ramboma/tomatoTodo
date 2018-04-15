@@ -1,4 +1,4 @@
-package org.rambosoft.tomatoTodo.core;
+package org.rambosoft.tomatoTodo.api.core;
 
 /**
  * Created by Administrator on 2018-04-15.

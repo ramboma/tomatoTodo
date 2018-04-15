@@ -1,4 +1,4 @@
-package org.rambosoft.tomatoTodo.api;
+package org.rambosoft.tomatoTodo.api.api;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +13,6 @@ public class ToDoController {
     @GetMapping(value="list")
     public String getTodoList()
     {
-       return "todo list";
+       return "todolist";
     }
 }
