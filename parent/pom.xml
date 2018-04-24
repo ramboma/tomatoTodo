@@ -39,7 +39,27 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!--其他-->
+            <!--模块依赖-->
+            <dependency>
+                <groupId>org.rambosoft.tomatoTodo</groupId>
+                <artifactId>domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.rambosoft.tomatoTodo</groupId>
+                <artifactId>dao</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.rambosoft.tomatoTodo</groupId>
+                <artifactId>service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.rambosoft.tomatoTodo</groupId>
+                <artifactId>service.impl</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

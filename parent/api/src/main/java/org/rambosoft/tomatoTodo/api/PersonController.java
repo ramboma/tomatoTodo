@@ -16,6 +16,7 @@ public class PersonController {
     @GetMapping("get")
     public Person getPersonById(int id)
     {
+        System.out.println("info");
        return iPersonService.getPerson(id);
     }
     @PostMapping("add")

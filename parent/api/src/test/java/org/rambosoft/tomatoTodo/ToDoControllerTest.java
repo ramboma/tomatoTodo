@@ -36,7 +36,7 @@ public class ToDoControllerTest {
     {
         String url=base.toString()+"list";
         ResponseEntity<String> response=template.getForEntity(url, String.class);
-        assertThat(response.getBody(),equalTo("todolist"));
+        assertThat(response.getStatusCode().value(),equalTo(200));
     }
 
 }

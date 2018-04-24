@@ -8,15 +8,14 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>api</artifactId>
+    <packaging>jar</packaging>
 
     <dependencies>
         <!--模块依赖-->
         <dependency>
             <groupId>org.rambosoft.tomatoTodo</groupId>
             <artifactId>service.impl</artifactId>
-            <version>${parent.version}</version>
         </dependency>
         <!--spring boot 依赖-->
         <dependency>
@@ -33,6 +32,11 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
 
     </dependencies>
     <build>
@@ -40,6 +44,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
