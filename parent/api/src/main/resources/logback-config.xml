@@ -13,7 +13,12 @@
             <charset>utf8</charset>
         </encoder>
     </appender>
+    <logger name="samplelog">
+        <level value="INFO"/>
+        <appender-ref ref="simpleOUT"/>
+    </logger>
 
+    <!--控制器日志-->
     <appender name="org.rambosoft.tomatoTodo.apiAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_DIR}/tomatotodolist/apiController.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -25,6 +30,11 @@
             <charset>utf8</charset>
         </encoder>
     </appender>
+    <logger name="org.rambosoft.tomatoTodo.api.PersonController">
+        <level value="INFO"/>
+        <appender-ref ref="org.rambosoft.tomatoTodo.apiAppender"/>
+    </logger>
+    <!--服务日志-->
     <appender name="org.rambosoft.tomatoTodo.service.impl.PersonServiceImplAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_DIR}/tomatotodolist/personService.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -36,6 +46,10 @@
             <charset>utf8</charset>
         </encoder>
     </appender>
+    <logger name="org.rambosoft.tomatoTodo.service.impl.PersonServiceImpl">
+        <level value="INFO"/>
+        <appender-ref ref="org.rambosoft.tomatoTodo.service.impl.PersonServiceImplAppender"/>
+    </logger>
     <!--标准输出-->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
@@ -43,18 +57,33 @@
             <charset>utf8</charset>
         </encoder>
     </appender>
-    <logger name="samplelog">
-        <level value="INFO"/>
-        <appender-ref ref="simpleOUT"/>
+
+    <!--hibernate日志-->
+    <appender name="HIBERNATE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_DIR}/hibernate.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_DIR}/hibernate.log.%d</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <logger name="org.hibernate" additivity="false">
+        <level value="TRACE"/>
+        <appender-ref ref="HIBERNATE"/>
     </logger>
-    <logger name="org.rambosoft.tomatoTodo.service.impl.PersonServiceImpl">
-        <level value="INFO"/>
-        <appender-ref ref="org.rambosoft.tomatoTodo.service.impl.PersonServiceImplAppender"/>
+
+    <logger name="org.hibernate.SQL" additivity="false">
+        <level value="TRACE"/>
+        <appender-ref ref="HIBERNATE"/>
     </logger>
-    <logger name="org.rambosoft.tomatoTodo.api.PersonController">
-        <level value="INFO"/>
-        <appender-ref ref="org.rambosoft.tomatoTodo.apiAppender"/>
+
+    <logger name="org.hibernate.type.descriptor.sql" additivity="false">
+        <level value="TRACE"/>
+        <appender-ref ref="HIBERNATE"/>
     </logger>
+
     <logger name="ROOT">
         <level value="INFO"/>
         <appender-ref ref="STDOUT"/>
