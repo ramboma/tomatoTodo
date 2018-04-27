@@ -27,6 +27,11 @@
             <artifactId>service</artifactId>
             <version>${parent.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.rambosoft.tomatoTodo</groupId>
+            <artifactId>utility</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
 
         <!--spring boot 依赖-->
         <dependency>

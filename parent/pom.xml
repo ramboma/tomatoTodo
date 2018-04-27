@@ -23,6 +23,7 @@
         <module>service</module>
         <module>service.impl</module>
         <module>domain</module>
+        <module>utility</module>
     </modules>
 
 
