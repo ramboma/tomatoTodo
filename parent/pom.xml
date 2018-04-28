@@ -24,6 +24,7 @@
         <module>service.impl</module>
         <module>domain</module>
         <module>utility</module>
+        <module>mybatisgenerator</module>
     </modules>
 
 
@@ -70,6 +71,11 @@
             <dependency>
                 <groupId>org.rambosoft.tomatoTodo</groupId>
                 <artifactId>service.impl</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.rambosoft.tomatoTodo</groupId>
+                <artifactId>mybatisgenerator</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
