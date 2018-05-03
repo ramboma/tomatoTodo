@@ -48,7 +48,6 @@
 		<!---->
 		<!--<table schema="" tableName="fc_customer" domainObjectName="Customer">-->
 
-
 		<table schema="" tableName="person" domainObjectName="Person">
 		</table>
 
